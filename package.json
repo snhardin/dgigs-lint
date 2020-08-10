@@ -4,6 +4,10 @@
   "description": "Scott's opinionated linting rules.",
   "author": "Scott Hardin",
   "license": "BSD-3-Clause",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/snhardin/eslint-config-dgigs"
+  },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^2.32.0",
     "@typescript-eslint/parser": "^2.32.0",
