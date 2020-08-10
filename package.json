@@ -1,0 +1,18 @@
+{
+  "name": "eslint-config-dgigs",
+  "version": "0.0.1",
+  "description": "Scott's opinionated linting rules.",
+  "author": "Scott Hardin",
+  "license": "BSD-3-Clause",
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.32.0",
+    "@typescript-eslint/parser": "^2.32.0",
+    "eslint-config-airbnb-typescript": "^7.2.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jest": "^23.20.0",
+    "eslint-plugin-jsdoc": "^30.1.0"
+  },
+  "peerDependencies": {
+    "eslint": "^7.0.0"
+  }
+}
