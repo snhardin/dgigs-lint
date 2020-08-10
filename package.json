@@ -9,7 +9,7 @@
     "url": "https://github.com/snhardin/eslint-config-dgigs"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^2.32.0",
+    "@typescript-eslint/eslint-plugin": "^2.34.0",
     "@typescript-eslint/parser": "^2.32.0",
     "eslint-config-airbnb-typescript": "^7.2.1",
     "eslint-plugin-import": "^2.20.2",

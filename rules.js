@@ -1,6 +1,15 @@
 module.exports = {
+    // ESLint rules
+    'arrow-parens': ['error', 'as-needed'],
+    'no-console': ['error'],
+    'no-underscore-dangle': 0,
+    'max-len': ['error', { 'code': 200 }],
+
+    // Typescript rules
     '@typescript-eslint/indent': ['error', 4],
     '@typescript-eslint/space-before-function-paren': ['error', 'always'],
+
+    // JSDoc rules
     'jsdoc/check-indentation': ['error'],
     'jsdoc/check-param-names': ['error'],
     'jsdoc/check-tag-names': ['error'],
@@ -26,6 +35,4 @@ module.exports = {
     }],
     'jsdoc/require-param-type': 0,
     'jsdoc/require-returns-type': 0,
-    'no-console': 1,
-    'no-underscore-dangle': 0,
 };
