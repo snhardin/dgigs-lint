@@ -9,6 +9,7 @@ module.exports = {
     'keyword-spacing': 'off',
     'lines-between-class-members': 'off',
     'no-array-constructor': 'off',
+    'no-cap': 'off',
     'no-empty-function': 'off',
     'no-dupe-class-members': 'off',
     'no-extra-parens': 'off',
@@ -21,6 +22,7 @@ module.exports = {
     'no-useless-constructor': 'off',
     'require-await': 'off',
     'no-return-await': 'off',
+    'quotes': 'off',
     'semi': 'off',
     'space-before-function-paren': 'off',
 };

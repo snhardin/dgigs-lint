@@ -1,6 +1,10 @@
 module.exports = {
-    'jsdoc/check-indentation': ['error'],
+    'jsdoc/check-access': 'off',
+    'jsdoc/check-alignment': ['error'],
+    'jsdoc/check-examples': 'off',
+    'jsdoc/check-indentation': 'off',
     'jsdoc/check-param-names': ['error'],
+    'jsdoc/check-property-names': 'off',
     'jsdoc/check-tag-names': ['error'],
     'jsdoc/check-types': 'off',
     'jsdoc/implements-on-classes': 'off',

@@ -5,28 +5,11 @@ module.exports = {
     '@typescript-eslint/comma-spacing': ['error'],                              /* Enforce consistent comma spacing. */
     '@typescript-eslint/default-param-last': ['error'],                         /* Enforce default parameters to be last in method signature. */
     '@typescript-eslint/dot-notation': ['error', {                              /* Enforce dot notation whenever possible. */
-        'allowPrivateClassPropertyAccess': 'off',
+        'allowPrivateClassPropertyAccess': false,
     }],
-    '@typescript-eslint/function-call-spacing': ['error', 'never'],             /* Disallow spacing between function identifiers and their invocations. */
+    '@typescript-eslint/func-call-spacing': ['error', 'never'],                 /* Disallow spacing between function identifiers and their invocations. */
     '@typescript-eslint/indent': ['error', 'tab', {                             /* Enforce consistent indentation. May be buggy. */
         'SwitchCase': 1,
-        'VariableDecorator': 1,
-        'outerIIFEBody': 1,
-        'MemberExpression': 1,
-        'FunctionDeclaration': {
-            'body': 1,
-            'parameters': 2,
-        },
-        'FunctionExpression': {
-            'body': 1,
-            'parameters': 2,
-        },
-        'CallExpressions': {
-            'arguments': 1,
-        },
-        'ArrayExpression': 1,
-        'ObjectExpression': 1,
-        'ImportDeclaration': 1,
         'flatTernaryExpressions': true,
         'offsetTernaryExpressions': false,
         'ignoreComments': false,
@@ -54,14 +37,14 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': 'off',                                 /* Disallow unused variables and arguments. */
     '@typescript-eslint/no-use-before-define': 'off',                           /* Disallow use of variables and functions before they're defined. (Must disable this as we have defined a mandatory alphabetical order to definitions.) */
     '@typescript-eslint/no-useless-constructor': ['error'],                     /* Disallow unnecessary constructors. */
+    '@typescript-eslint/quotes': ['error', 'single', {                          /* Enforce the consistent use of either backticks, double, or single quotes. */
+        'avoidEscape': false,
+        'allowTemplateLiterals': true,
+    }],
     '@typescript-eslint/require-await': ['error'],                              /* Disallow async functions which have no `await` expression. */
     '@typescript-eslint/return-await': 'off',                                   /* If turned on, this would enforce consistent returning of awaited values. */
-    '@typescript-eslint/semi': ['error', {                                      /* Require semicolons. */
+    '@typescript-eslint/semi': ['error', 'always', {                            /* Require semicolons. */
         'omitLastInOneLineBlock': false,
     }],
-    '@typescript-eslint/space-before-function-paren': ['error', 'always', {     /* Require a space before function parenthesis. */
-        'anonymous': 'always',
-        'named': 'always',
-        'asyncArrow': 'always',
-    }],
+    '@typescript-eslint/space-before-function-paren': ['error', 'always'],      /* Require a space before function parenthesis. */
 };

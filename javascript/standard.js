@@ -101,7 +101,7 @@ module.exports = {
         'allowIndirect': true,
     }],
     'no-extend-native': 'off',                                   /* If enabled, this would disallow extending of native types. This is disabled because of Angular polyfills. */
-    'no-extra-binding': ['error'],                               /* Disallow unnecessary calls to `.bind()`. */
+    'no-extra-bind': ['error'],                                  /* Disallow unnecessary calls to `.bind()`. */
     'no-extra-label': 'off',                                     /* If enabled, this would disallow unnecessary labels. This is disabled because we're disabling labels globally anyways. */
     'no-fallthrough': ['error'],                                 /* Disallow fallthrough of `case` statements. */
     'no-floating-decimal': ['error'],                            /* Disallow leading or trailing decimal points in numeric literals. */
@@ -142,7 +142,7 @@ module.exports = {
         'props': false,
     }],
     'no-proto': 'off',                                           /* If enabled, this would disallow the use of the `__proto__` property. Probably will never be an issue. */
-    'no-declare': ['error', {                                    /* Disallow variable redeclaration. */
+    'no-redeclare': ['error', {                                  /* Disallow variable redeclaration. */
         'builtinGlobals': true,
     }],
     'no-restricted-properties': 'off',                           /* Disallow certain properties on certain objects. */
@@ -376,7 +376,7 @@ module.exports = {
         'ignoreComments': false,
     }],
     'no-underscore-dangle': ['error', {                          /* Disallow dangling underscores in identifiers. */
-        'allowAfterThis': false,
+        'allowAfterThis': true,
         'allowAfterSuper': false,
         'allowAfterThisConstructor': false,
         'enforceInMethodNames': true,
@@ -403,7 +403,7 @@ module.exports = {
         'prev': '*',
         'next': 'return',
     }],
-    'prefer-exponentation-operator': ['error'],                  /* Disallow the use of `Math.pow` in favor of the `**` operator. */
+    'prefer-exponentiation-operator': ['error'],                 /* Disallow the use of `Math.pow` in favor of the `**` operator. */
     'prefer-object-spread': 'off',                               /* If enabled, this would disallow using `Object.assign` with an object literal as the first argument and prefer the use of object spread instead. */
     'quote-props': ['error', 'as-needed', {                      /* Require quotes around object literal property names as needed. */
         'keywords': true,
@@ -442,11 +442,7 @@ module.exports = {
         'words': true,
         'nonwords': false,
     }],
-    'spaced-comment': ['error', 'always', {                      /* Enforce consistent spacing after the `//` or `/*` in a comment. */
-        'block': {
-            'balanced': true,
-        },
-    }],
+    'spaced-comment': 'off',                                     /* Enforce consistent spacing after the `//` or `/*` in a comment. Too finicky with JSDoc stuff. */
     'switch-colon-spacing': ['error', {                          /* Enforce spacing around colons of switch statements. */
         'after': true,
         'before': false,

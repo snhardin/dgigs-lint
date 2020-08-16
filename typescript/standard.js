@@ -1,6 +1,8 @@
 module.exports = {
     '@typescript-eslint/adjacent-overload-signatures': ['error'],               /* Require that member overloads be consecutive. */
-    '@typescript-eslint/array-type': ['error', 'array'],                        /* Requires using T[] for arrays. */
+    '@typescript-eslint/array-type': ['error', {                                /* Requires using T[] for arrays. */
+        'default': 'array',
+    }],
     '@typescript-eslint/await-thenable': ['error'],                             /* Disallows awaiting a value that is not a Promise. */
     '@typescript-eslint/ban-ts-comment': ['error'],                             /* Bans TypeScript directive comments from being used. */
     '@typescript-eslint/ban-tslint-comment': ['error'],                         /* Bans TSLint comments from being used. */
@@ -11,10 +13,10 @@ module.exports = {
         'objectLiteralTypeAssertions': 'never',
     }],
     '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],   /* Enforces consistent type definitions with `interface`. */
-    '@typescript-eslint/explicit-function-return-type': ['warn', {              /* Require explicit return types on fuctions and class methods. */
+    '@typescript-eslint/explicit-function-return-type': ['warn', {              /* Require explicit return types on functions and class methods. */
         'allowExpressions': true,
-        'allowTypedFuctionExpressions': true,
-        'allowHighOrderFuctions': true,
+        'allowTypedFunctionExpressions': true,
+        'allowHigherOrderFunctions': true,
         'allowConciseArrowFunctionExpressionsStartingWithVoid': true,
     }],
     '@typescript-eslint/explicit-member-accessibility': ['error', {             /* Require explicit accessibility modifiers on class properties and methods. */
@@ -23,7 +25,7 @@ module.exports = {
             'constructors': 'off',
         },
     }],
-    '@typescript-eslint/explicit-member-boundary-types': ['error', {            /* Require explicit return ty pes on functions and class methods. */
+    '@typescript-eslint/explicit-module-boundary-types': ['error', {            /* Require explicit return types on functions and class methods. */
         'allowArgumentsExplicitlyTypedAsAny': true,
         'allowDirectConstAssertionInArrowFunctions': true,
         'allowHigherOrderFunctions': true,
@@ -40,40 +42,7 @@ module.exports = {
         },
     }],
     '@typescript-eslint/member-ordering': ['error', {                           /* Require a consistent member declaration order. */
-       'classes': {
-            'memberTypes': [
-                'private-field',
-                'public-field',
-                'private-constructor',
-                'public-constructor',
-                'private-method',
-                'public-method',
-            ],
-            'order': 'alphabetically',
-        },
-        'classExpressions': {
-            'memberTypes': [
-                'private-field',
-                'public-field',
-                'private-constructor',
-                'public-constructor',
-                'private-method',
-                'public-method',
-            ],
-            'order': 'alphabetically',
-        },
-        'interfaces': {
-            'memberTypes': [
-                'private-field',
-                'public-field',
-                'private-constructor',
-                'public-constructor',
-                'private-method',
-                'public-method',
-            ],
-            'order': 'alphabetically',
-        },
-        'typeLiterals': {
+        'default': {
             'memberTypes': [
                 'private-field',
                 'public-field',
@@ -101,12 +70,6 @@ module.exports = {
     {
         'selector': 'variable',
         'format': ['camelCase', 'UPPER_CASE'],
-    },
-    {
-        'selector': 'memberLike',
-        'modifiers': ['private'],
-        'format': ['camelCase'],
-        'leadingUnderscore': 'require',
     },
     {
         'selector': 'memberLike',
@@ -186,7 +149,6 @@ module.exports = {
     '@typescript-eslint/prefer-string-starts-ends-with': 'off',                 /* If turned on, this would require the use of `String#startsWith` and `String#endsWith` instead of other equivalent methods of checking substrings. */
     '@typescript-eslint/prefer-ts-expect-error': 'off',                         /* If turned on, this would require using `// @ts-expect-error` over `// @ts-ignore`. We have these globally turned off. */
     '@typescript-eslint/promise-function-async': 'off',                         /* If turned on, this would require any function or method that returns a `Promise` to be marked as `async`. */
-    '@typescript-eslint/quotes': ['error'],                                     /* Enforce the consistent use of either backticks, double, or single quotes. */
     '@typescript-eslint/require-array-sort-compare': 'off',                     /* If turned on, requires `Array#sort` calls to always provide a `compareFunction`. */
     '@typescript-eslint/restrict-plus-operands': ['error', {                    /* When adding two variables, operands must both be of type number or of type string. */
         'checkCompoundAssignments': true,
@@ -204,5 +166,5 @@ module.exports = {
     '@typescript-eslint/unbound-method': ['warn', {                             /* Warns when unbound methods are called with their expected scope. */
         'ignoreStatic': false,
     }],
-    '@typescript-eslint/unified-signatures': ['error'],                         /* Requires unificatino of any two overloads that could be unified into one by using a union or an optional/rest parameter. */
+    '@typescript-eslint/unified-signatures': ['error'],                         /* Requires unification of any two overloads that could be unified into one by using a union or an optional/rest parameter. */
 };

@@ -9,16 +9,14 @@ module.exports = {
     },
     parser: '@typescript-eslint/parser',
     parserOptions: {
+        ecmaVersion: 2015,
         project: './tsconfig.json',
+        sourceType: 'module',
     },
     plugins: [
         'jest',
         'jsdoc',
         '@typescript-eslint',
     ],
-    rules: Object.assign({ }, j.rules, {
-        ...overrides,
-        ...extensions,
-        ...standard,
-    }),
+    rules: Object.assign({ }, j.rules, overrides, extensions, standard),
 };

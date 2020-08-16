@@ -1,11 +1,11 @@
 module.exports = {
     /* ECMAScript 6 rules: */
-    'arrow-body-style': ['as-needed'],                           /* Require braces around arrow function bodies only where needed. */
-    'arrow-parens': ['as-needed'],                               /* Require parentheses around arrow function arguments where needed. */
+    'arrow-body-style': ['error', 'as-needed'],                  /* Require braces around arrow function bodies only where needed. */
+    'arrow-parens': ['error', 'as-needed'],                      /* Require parentheses around arrow function arguments where needed. */
     'arrow-spacing': ['error'],                                  /* Enforce consistent spacing before and after the arrow in arrow functions. */
     'constructor-super': ['error'],                              /* Require `super()` calls in constructors. */
     'generator-star-spacing': ['error'],                         /* Enforce consistent spacing around `*` operators in generator functions. */
-    'no-class-align': ['error'],                                 /* Disallow reassigning class members. */
+    'no-class-assign': ['error'],                                /* Disallow reassigning class members. */
     'no-confusing-arrow': ['error'],                             /* Disallow arrow functions where they could be confused with comparisons. */
     'no-const-assign': ['error'],                                /* Disallow reassigning `const` variables. */
     'no-dupe-class-members': ['error'],                          /* Disallow duplicate class members. */
@@ -13,8 +13,8 @@ module.exports = {
         'includeExports': true
     }],
     'no-new-symbol': ['error'],                                  /* Disallow `new` operators with the `Symbol` object. */
-    'no-restricted-exports': ['allow'],                          /* Disallow specified names in exports. */
-    'no-restricted-imports': ['allow'],                          /* Disallow specified modules when loaded by `import`. */
+    'no-restricted-exports': 'off',                              /* Disallow specified names in exports. */
+    'no-restricted-imports': 'off',                              /* Disallow specified modules when loaded by `import`. */
     'no-this-before-super': ['error'],                           /* Disallow `this` / `super` before calling `super()` in constructors. */
     'no-useless-computed-key': ['error', {                       /* Disallow unnecessary computed property keys in objects and classes. */
         'enforceForClassMembers': true,
@@ -23,7 +23,7 @@ module.exports = {
     'no-useless-rename': ['error'],                              /* Disallow renaming import, export, and destructured assignments to the same name. */
     'no-var': ['error'],                                         /* Require `let` or `const` instead of `var`. */
     'object-shorthand': ['error', 'always'],                     /* Require or disallow method and property shorthand syntax for object literals. */
-    'prefer-arrow-callback': ['allow'],                          /* Require using arrow functions for callbacks. */
+    'prefer-arrow-callback': 'off',                              /* Require using arrow functions for callbacks. */
     'prefer-const': ['error'],                                   /* Require `const` declarations for variables that are never reassigned after declared. */
     'prefer-destructuring': ['error'],                           /* Require destructuring from arrays and/or objects. */
     'prefer-numeric-literals': ['error'],                        /* Disallow `parseInt()` and `Number.parseInt()` in favor of binary, octal, and hexidecimal literals. */

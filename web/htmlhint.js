@@ -1,5 +1,5 @@
 module.exports = {
-    'doctype-first': true,                  /* Require Doctype first.. */
+    'doctype-first': false,                 /* If enabled, this would require Doctype first.. */
     'doctype-html5': false,                 /* If enabled, this would require the Doctype to be html5 */
     'head-script-disabled': false,          /* If enabled, this would disallow the `<script>` in `<head>`. */
     'style-disabled': true,                 /* Disallow `<style>` tag. */
