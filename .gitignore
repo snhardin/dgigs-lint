@@ -1,1 +1,3 @@
 node_modules/
+web/htmlhint.json
+web/stylelint.json

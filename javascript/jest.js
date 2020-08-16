@@ -47,7 +47,7 @@ module.exports = {
         'maxArgs': 1,
     }],
     'jest/valid-expect-in-promise': ['error'],                   /* Enforces having a return statement when testing with promises. */
-    'kest/valid-title': ['error', {                              /* Enforces valid titles. */
+    'jest/valid-title': ['error', {                              /* Enforces valid titles. */
         'ignoreTypeOfDescribeName': false,
     }],
 };
