@@ -4,12 +4,12 @@ Scott's opinionated eslint config, common between most of his projects.
 
 ## Usage
 
-* **Note:** It's assumed that you are using `typescript` with `jest` for testing for now.
+* **Note:** It's assumed that you are using `jest` for testing for now.
 
-Put this in your `.eslintrc.js` file:
+Generate linting configs by running the following:
 
-```javascript
-module.exports = {
-    extends: ['eslint-config-dgigs/full'],
-};
+```shell
+npx dgigs-lint <angular/typescript/javascript>
 ```
+
+Then run ESLint and HtmlHint (if applicable).
