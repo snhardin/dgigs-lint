@@ -13,24 +13,14 @@ module.exports = {
         'objectLiteralTypeAssertions': 'never',
     }],
     '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],   /* Enforces consistent type definitions with `interface`. */
-    '@typescript-eslint/explicit-function-return-type': ['warn', {              /* Require explicit return types on functions and class methods. */
-        'allowExpressions': true,
-        'allowTypedFunctionExpressions': true,
-        'allowHigherOrderFunctions': true,
-        'allowConciseArrowFunctionExpressionsStartingWithVoid': true,
-    }],
+    '@typescript-eslint/explicit-function-return-type': 'off',                  /* Require explicit return types on functions and class methods. */
     '@typescript-eslint/explicit-member-accessibility': ['error', {             /* Require explicit accessibility modifiers on class properties and methods. */
         'accessibility': 'explicit',
         'overrides': {
             'constructors': 'off',
         },
     }],
-    '@typescript-eslint/explicit-module-boundary-types': ['error', {            /* Require explicit return types on functions and class methods. */
-        'allowArgumentsExplicitlyTypedAsAny': true,
-        'allowDirectConstAssertionInArrowFunctions': true,
-        'allowHigherOrderFunctions': true,
-        'allowTypedFunctionExpressions': true,
-    }],
+    '@typescript-eslint/explicit-module-boundary-types': 'off',                 /* Require explicit return types on functions and class methods. */
     '@typescript-eslint/member-delimiter-style': ['error', {                    /* Require a specific member delimiter style for interfaces and type literals. */
         'multiline': {
             'delimiter': 'semi',
@@ -78,6 +68,7 @@ module.exports = {
             'regex': '[- ]',
             'match': false,
         },
+        'leadingUnderscore': 'allow',
     },
     {
         'selector': 'default',

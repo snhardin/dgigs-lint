@@ -51,7 +51,7 @@ module.exports = {
         'enforceForOrderingRelations': false,
     }],
     'no-useless-backreference': 'off',                           /* Disallow useless backreferences in regular expressions. */
-    'require-atomic-updates': ['error'],                         /* Disallow assignments that can lead to race conditions due to usage of `await` or `yield`. */
+    'require-atomic-updates': 'off',                             /* Disallow assignments that can lead to race conditions due to usage of `await` or `yield`. Seems prone to false positives? */
     'use-isnan': ['error', {                                     /* Require calls to `isNaN()` when checking for `NaN`. */
         'enforceForSwitchCase': true,
         'enforceForIndexOf': true,
@@ -168,7 +168,7 @@ module.exports = {
     'no-useless-escape': ['error'],                              /* Disallow unnecessary escape characters. */
     'no-useless-return': ['error'],                              /* Disallow redundant return statements. */
     'no-void': ['error', {                                       /* Disallow `void` operators. */
-        'allowAsStatement': false,
+        'allowAsStatement': true,                                /* Must be true for compatibility with @typescript-eslint/no-floating-promises void exception. */
     }],
     'no-warning-comments': 'off',                                /* If enabled, this would disallow specified warning terms in comments. */
     'no-with': ['error'],                                        /* Disallow `with` statements. */
@@ -242,11 +242,11 @@ module.exports = {
     'array-element-newline': 'off',                              /* If enabled, this would enforce line breaks between array elements. */
     'block-spacing': ['error', 'always'],                        /* Enforce spaces inside of blocks after opening block and before closing block. */
     'brace-style': ['error', '1tbs'],                            /* Enforce consistent brace style for blocks. */
-    'camelcase': ['error', {                                     /* Enforce camelcase naming convention. */
+    'camelcase': ['warn', {                                      /* Enforce camelcase naming convention. There are lots of libraries that don't follow this convention that require input in snake case, so this is a warning. */
         'properties': 'always',
-        'ignoreDestructuring': false,
-        'ignoreImports': false,
-        'ignoreGlobals': false,
+        'ignoreDestructuring': true,
+        'ignoreImports': true,
+        'ignoreGlobals': true,
     }],
     'capitalized-comments': 'off',                               /* If enabled, this would enforce or disallow capitalization of the first letter of a comment. */
     'comma-dangle': ['error', 'only-multiline'],                 /* Require trailing commas on on multiline. Disallow trailing commas on single line. */
@@ -336,11 +336,7 @@ module.exports = {
     }],
     'multiline-comment-style': 'off',                            /* If enabled, this would enforce a particular style for multiline comments. */
     'multiline-ternary': 'off',                                  /* If enabled, this would enforce newlines between operands of ternary expressions. */
-    'new-cap': ['error', {                                       /* Require constructor names to begin with a capital letter. */
-        'newIsCap': true,
-        'capIsNew': true,
-        'properties': true,
-    }],
+    'new-cap': 'off',                                            /* Require constructor names to begin with a capital letter. Prone to false positives. */
     'new-parens': ['error', 'always'],                           /* Require parentheses when invoking a constructor with no arguments. */
     'newline-per-chained-call': ['error', {                      /* Require a newline after each call in a method chain. */
         'ignoreChainWithDepth': 2,
