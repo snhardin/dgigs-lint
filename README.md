@@ -12,4 +12,6 @@ Generate linting configs by running the following:
 npx dgigs-lint <angular/typescript/javascript>
 ```
 
+This will result in a `.eslintrc.json` file and, if using the angular configuration, a `.htmlhintrc` file.
+
 Then run ESLint and HtmlHint (if applicable).
