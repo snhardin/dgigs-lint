@@ -1,44 +1,33 @@
-const fs = require('fs');
-const process = require('process');
+#!/usr/bin/env node
 
-function main () {
+const fs = require('fs');
+const html = require('./html');
+
+const htmlFilePath = './.htmlhintrc';
+
+(function () {
 	const mode = process.argv[2];
 	if (!mode) {
 		console.error('Wrong number of arguments.');
-		console.error('Usage: dgigs-lint <angular/typescript/javascript>');
+		console.error('Usage: dgigs-lint <html>');
 		process.exit(1);
-
-		return;
 	}
 
-	// As much as I'd love to use a switch-case, we need better scope management.
-	if (mode === 'angular') {
-		const options = require('./typescript');
-		options.env.browser = true;
+	switch (mode.toLowerCase()) {
+		case 'html':
+			try {
+				fs.writeFileSync(htmlFilePath, JSON.stringify(html));
+				console.log('Wrote .htmlhintrc file to disk');
+			} catch (err) {
+				console.error(`Error while writing ${htmlFilePath} file:`, err);
+			}
 
-		const htmlhint = require('./web/htmlhint');
+			break;
 
-		fs.writeFileSync('.eslintrc.json', JSON.stringify(options));
-		fs.writeFileSync('.htmlhintrc.json', JSON.stringify(htmlhint));
-	} else if (mode === 'typescript') {
-		const options = require('./typescript');
-		options.env.node = true;
+		default:
+			console.error(`Unknown option ${mode}`);
+			console.error('Usage: dgigs-lint <html>');
 
-		fs.writeFileSync('.eslintrc.json', JSON.stringify(options));
-	} else if (mode === 'javascript') {
-		const options = require('./javascript');
-		options.env.node = true;
-
-		fs.writeFileSync('.eslintrc.json', JSON.stringify(options));
-	} else {
-		console.error('Unknown option.');
-		console.error('Usage: dgigs-lint <angular/typescript/javascript>');
-		process.exit(1);
-
-		return;
+			break;
 	}
-
-	console.log('Finished generating config files.');
-}
-
-main();
+}());
