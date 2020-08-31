@@ -88,9 +88,7 @@ module.exports = {
 	'@typescript-eslint/no-for-in-array': ['error'],                             /* Disallow iterating over an array with a for-in loop. */
 	'@typescript-eslint/no-implied-eval': ['error'],                             /* Disallow the use of `eval()`-like methods. */
 	'@typescript-eslint/no-inferrable-types': ['error'],                         /* Disallows explicit type declarations for variables or parameters initialized to a number, string, or boolean. */
-	'@typescript-eslint/no-invalid-void-type': ['error', {                       /* Disallows usage of `void` type outside of generic or return types. */
-		'allowInGenericTypeArguments': true,
-	}],
+	'@typescript-eslint/no-invalid-void-type': 'off',                            /* Disallows usage of `void` type outside of generic or return types. Prone to false positives. */
 	'@typescript-eslint/no-misused-new': ['error'],                             /* Enforce valid definition of `new` and `constructor`. */
 	'@typescript-eslint/no-misused-promises': ['error', {                       /* Avoid using promises in places not designed to handle them. */
 		'checkConditionals': true,
@@ -149,7 +147,7 @@ module.exports = {
 	'@typescript-eslint/switch-exhausitveness-check': 'off',                    /* If enabled, this would check to make sure all values are handled in a switch with a union type. */
 	'@typescript-eslint/triple-slash-reference': ['error', {                    /* Disallows usage of triple slash directives. */
 		'path': 'never',
-		'types': 'never',
+		'types': 'always',
 		'lib': 'never',
 	}],
 	'@typescript-eslint/type-annotation-spacing': ['error'],                    /* Require consistent spacing around type annotations. */

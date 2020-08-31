@@ -4,7 +4,7 @@ module.exports = {
 	'head-script-disabled': false,          /* If enabled, this would disallow the `<script>` in `<head>`. */
 	'style-disabled': true,                 /* Disallow `<style>` tag. */
 	'title-require': true,                  /* `<title>` must be present in `<head>` tags. */
-	'attr-lowercase': true,                 /* Require attribute name to be lowercase. */
+	'attr-lowercase': false,                /* Require attribute name to be lowercase. Conflicts with lots of Angular directives. */
 	'attr-no-duplication': true,            /* Disallow specifying the same attribute twice. */
 	'attr-no-unnecessary-whitespace': true, /* Disallow spaces between attribute names and values. */
 	'attr-no-unsafe-chars': true,           /* Disallow attribute values with unsafe characters. */
