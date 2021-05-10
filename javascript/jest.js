@@ -25,7 +25,7 @@ module.exports = {
 	'jest/no-mocks-import': ['error'],                           /* Disallow manually importing from `__mocks__`. (Results in duplicate mocks.) */
 	'jest/no-restricted-matchers': 'off',                        /* Disallow specific matchers and modifiers. */
 	'jest/no-standalone-expect': ['error'],                      /* Disallow using `expect` outside of `it` or `test` blocks. */
-	'jest/no-test-callback': ['error'],                          /* Disallow using a callback in async tests. */
+	'jest/no-done-callback': ['error'],                          /* Disallow using a callback in async tests. */
 	'jest/no-test-prefixes': ['error'],                          /* Requires usage of `.only` or `.skip` to skip tests (over the old `f` and `x` prefixes). */
 	'jest/no-test-return-statement': ['error'],                  /* Disallow explicitly returning from tests. */
 	'jest/prefer-called-with': ['error'],                        /* Requires usage of `toBeCalledWith()` or `toHaveBeenCalledWith()` over `toBeCalled()`. */

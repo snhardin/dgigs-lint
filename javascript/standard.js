@@ -223,7 +223,7 @@ module.exports = {
 		'typeof': false,
 	}],
 	'no-undef-init': ['error'],                                  /* Disallow initializing variables to `undefined` explicitly. */
-	'no-undefined': ['error'],                                   /* Disallow the use of `undefined` as an indentifier. */
+	'no-undefined': 'off',                                       /* Disallow the use of `undefined` as an indentifier. */
 	'no-unused-vars': ['error', {                                /* Disallow unused variables. */
 		'vars': 'all',
 		'args': 'after-used',
